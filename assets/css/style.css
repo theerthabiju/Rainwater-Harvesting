@@ -355,24 +355,143 @@ p {
   margin-bottom: 10px;
 }
 
-/* 💧 Impact Section */
-.impact {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+/* 🌊 IMPACT SECTION */
+.impact-section {
+  padding: 100px 60px;
+  text-align: center;
+  overflow: hidden;
 }
 
-.impact-box {
-  background: #00bfa6;
-  color: white;
-  border-radius: 15px;
-  padding: 30px;
-  flex: 1 1 250px;
-  font-size: 20px;
-  font-weight: 600;
+.impact-header h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #2C8CA1;
+  margin-bottom: 10px;
+}
+
+.impact-header p {
+  color: #2B2622;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 14px;
+}
+
+/* 💧 Flow Layout */
+.impact-flow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+}
+
+/* 🌐 Base Card Style */
+.impact-step {
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px 25px;
   text-align: center;
+  box-shadow: 0 8px 25px rgba(44, 140, 161, 0.15);
+  transition: all 0.4s ease;
+  position: relative;
+  border: 2px solid #69B3BE;
+}
+
+.impact-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(44, 140, 161, 0.25);
+}
+
+/* 🎯 Card Sizes */
+.small-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  min-height: 320px;
+}
+
+.center-card {
+  flex: 1 1 350px;
+  max-width: 400px;
+  min-height: 380px;
+  color: #fff;
+  transform: scale(1.1);
+  z-index: 2;
+  border: none;
+  box-shadow: 0 15px 40px rgba(44, 140, 161, 0.4);
+}
+
+.center-card h3,
+.center-card p {
+  color: #fff;
+}
+
+/* 💎 Icons */
+.impact-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #2C8CA1, #3A9CA7);
+  color: #fff;
+border-radius: 50%;
+  border-top-left-radius: 0;  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 20px rgba(44, 140, 161, 0.3);
+}
+
+
+
+/* 📝 Content */
+.impact-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2C8CA1;
+  margin-bottom: 10px;
+}
+
+.impact-content p {
+  color: #2B2622;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ✨ Animation */
+.impact-step {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.impact-step.show {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .impact-flow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .center-card {
+    transform: scale(1);
+    max-width: 100%;
+  }
+  .small-card {
+    max-width: 100%;
+  }
 }
 
 /* ✉️ Contact Section */

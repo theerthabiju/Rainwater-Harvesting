@@ -117,22 +117,44 @@
     </section>
 
     <!-- 🌍 Impact Section -->
-    <!-- <section id="impact">
-      <h2 class="section-title">Why It Matters</h2>
-      <p>
-        <strong>Problems:</strong> Flooding, wasted rainwater, urban drainage
-        issues.
-      </p>
-      <p>
-        <strong>SDS Solution:</strong> Smart collection, real-time monitoring,
-        and eco-efficient reuse.
-      </p>
-      <div class="impact">
-        <div class="impact-box">💧 Litres of Water Saved</div>
-        <div class="impact-box">🏙️ Communities Implemented</div>
-        <div class="impact-box">🌍 Sustainability Score</div>
+<section id="impact" class="impact-section">
+  <div class="impact-header">
+    <h2>Why It Matters</h2>
+    <p>From urban flooding to water wastage — SDS redefines sustainable water management.</p>
+  </div>
+
+  <div class="impact-flow">
+    <!-- Left Card -->
+    <div class="impact-step small-card">
+      <div class="impact-icon"><i class="bi bi-cloud-drizzle-fill"></i></div>
+      <div class="impact-content">
+        <h3>Urban Flooding</h3>
+        <p>Conventional systems fail during heavy rainfall, leading to overflow and infrastructure damage.</p>
       </div>
-    </section> -->
+    </div>
+
+    <!-- Center Card -->
+    <div class="impact-step center-card">
+      <div class="impact-icon"><i class="bi bi-cpu-fill"></i></div>
+      <div class="impact-content">
+        <h3>SDS Smart Solution</h3>
+        <p>Smart, modular systems collect, channel, and monitor stormwater efficiently — reducing waste and preventing floods.</p>
+      </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="impact-step small-card">
+      <div class="impact-icon"><i class="bi bi-globe-americas"></i></div>
+      <div class="impact-content">
+        <h3>Eco Impact</h3>
+        <p>Conserved water supports sustainable development and enhances environmental resilience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- ✉️ Contact Section -->
     <!-- <section class="contact">
@@ -170,5 +192,23 @@
         cards.forEach((card) => observer.observe(card));
       });
     </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const steps = document.querySelectorAll(".impact-step");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    steps.forEach((step) => observer.observe(step));
+  });
+</script>
+
+
   </body>
 </html>
