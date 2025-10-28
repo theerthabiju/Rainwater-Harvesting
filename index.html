@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainwater Harvesting | Smart Drainage System (SDS)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- 🌐 Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/img/water copy2.png" width="150" alt="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#innovation">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="bi bi-list"></i>
+      </div>
+    </nav>
+
+    <!-- 🌦️ Hero Section -->
+    <header>
+      <h1>Rainwater Harvesting – Revolutionizing Urban Water Management</h1>
+      <p>
+        Introducing SDS - The Smart Drainage System that captures, monitors, and
+        reuses rainwater efficiently.
+      </p>
+      <div class="btn-group">
+        <button class="btn">Learn About SDS</button>
+        <button class="btn">Join Our Mission</button>
+      </div>
+    </header>
+
+    <!-- 💧 About Section -->
+    <section id="about">
+      <h2 class="section-title">About Us</h2>
+      <p>
+        Rainwater Harvesting is a forward-thinking environmental solutions
+        company dedicated to addressing India’s growing water crisis through
+        innovation, sustainability, and technology. Our mission is to transform
+        how communities manage, store, and reuse rainwater — turning every drop
+        into a valuable resource for the future. At Rainwater Harvesting, we
+        believe that solving water scarcity begins with smarter infrastructure.
+        That’s why we’ve developed our breakthrough innovation — the Smart
+        Drainage System (SDS). This patented 4-in-1 modular system is designed
+        to divert, drain, store, and reuse rainwater efficiently. Unlike
+        traditional concrete pipes or tanks, SDS offers a lightweight,
+        eco-friendly, and cost-effective solution that prevents urban flooding
+        while conserving water for sustainable use.
+        <br />
+        Backed by international patents and years of dedicated research, SDS
+        represents a major leap forward in stormwater management. Its modular,
+        recyclable design makes it easy to install, transport, and adapt for
+        diverse applications — from roadworks and construction sites to
+        residential and commercial projects. Through innovation like SDS,
+        Rainwater Harvesting is building a cleaner, greener, and more
+        water-secure India — where technology and nature work hand in hand to
+        protect our planet’s most vital resource.
+      </p>
+      <div class="mission-vision">
+        <div class="mission-vision-card mission">
+          <div class="mv-icon"><i class="bi bi-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>
+            To make every drop count by integrating innovation and
+            sustainability in every project.
+          </p>
+        </div>
+
+        <div class="mission-vision-card vision">
+          <div class="mv-icon"><i class="bi bi-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>
+            A future where technology and nature flow together, creating
+            sustainable communities worldwide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⚙️ Our Innovation -->
+    <section id="innovation">
+      <h2 class="section-title">Our Innovation – SDS</h2>
+      <div class="innovation">
+        <img src="assets/img/sds1.jpeg" alt="SDS Smart Drainage System" />
+        <div class="innovation-content">
+          <p>
+            SDS is our latest innovation — an IoT-enabled smart drainage network
+            that monitors rainfall, prevents urban flooding, and directs excess
+            water into filtration and storage systems for reuse.
+          </p>
+          <div class="icons">
+            <div class="icon-box">
+              <i class="bi bi-droplet"></i><br />Smart Monitoring
+            </div>
+            <div class="icon-box">
+              <i class="bi bi-gear"></i><br />Automatic Flow Control
+            </div>
+            <div class="icon-box">
+              <i class="bi bi-recycle"></i><br />Water Recycling
+            </div>
+            <div class="icon-box">
+              <i class="bi bi-graph-up"></i><br />Real-Time Data
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌍 Impact Section -->
+    <!-- <section id="impact">
+      <h2 class="section-title">Why It Matters</h2>
+      <p>
+        <strong>Problems:</strong> Flooding, wasted rainwater, urban drainage
+        issues.
+      </p>
+      <p>
+        <strong>SDS Solution:</strong> Smart collection, real-time monitoring,
+        and eco-efficient reuse.
+      </p>
+      <div class="impact">
+        <div class="impact-box">💧 Litres of Water Saved</div>
+        <div class="impact-box">🏙️ Communities Implemented</div>
+        <div class="impact-box">🌍 Sustainability Score</div>
+      </div>
+    </section> -->
+
+    <!-- ✉️ Contact Section -->
+    <!-- <section class="contact">
+      <h2>Join us in reshaping the future of water management</h2>
+      <div class="contact-buttons">
+        <button class="btn">Partner With Us</button>
+        <button class="btn">Contact Our Team</button>
+      </div>
+    </section> -->
+
+    <footer>© 2025 Rainwater Harvesting | All Rights Reserved</footer>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".mission-vision-card");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        cards.forEach((card) => observer.observe(card));
+      });
+    </script>
+  </body>
+</html>
