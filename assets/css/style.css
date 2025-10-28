@@ -325,7 +325,7 @@ p {
 }
 
 .innovation img {
-  width: 350px;
+  width: 450px;
   border-radius: 15px;
 }
 
@@ -342,16 +342,17 @@ p {
 
 .icon-box {
   flex: 1 1 45%;
-  background: #e0f7f4;
+  background: #b1eaf34f;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+  font-size: 14px;
 }
 
 .icon-box i {
   font-size: 28px;
-  color: #00796b;
-  margin-bottom: 8px;
+  color: #2C8CA1;
+  margin-bottom: 10px;
 }
 
 /* 💧 Impact Section */
