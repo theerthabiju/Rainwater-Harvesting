@@ -344,7 +344,7 @@ p {
 .mission-vision-card:hover {
   background-color: #1e73be; /* Darker hover color */
   transform: translateY(-10px);
-  box-shadow: 0 5px 15px rgba(44, 140, 161, 0.25);
+  box-shadow: 0 5px 15px rgba(44, 99, 161, 0.25);
   color: white; /* All text inside turns white */
 }
 
@@ -369,7 +369,7 @@ p {
   justify-content: center;
   font-size: 30px;
   margin: 0 auto 20px;
-  box-shadow: 0 6px 20px rgba(44, 140, 161, 0.4);
+  box-shadow: 0 6px 20px rgba(36, 92, 156, 0.4);
   z-index: 1;
   position: relative;
   transition: background 0.3s ease;
@@ -463,7 +463,7 @@ p {
 
 .icon-box {
   flex: 1 1 45%;
-  background: #b1eaf34f;
+  background: #b1dbf34f;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -774,7 +774,7 @@ p {
   color: white;
 }
 
-/* 🌊 Footer */
+/*  Footer */
 .site-footer {
   background-color: var(--secondary-color);
   color: white;
@@ -789,7 +789,7 @@ p {
   gap: 40px;
 }
 
-/* 🧩 Columns */
+/*  Columns */
 .footer-col {
   flex: 1 1 280px;
 }
