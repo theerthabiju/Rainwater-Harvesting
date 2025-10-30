@@ -798,9 +798,7 @@ p {
   width: 100px;
   margin-bottom: 15px;
 }
-.footericon{
-  color: white;
-}
+
 .footer-about {
   text-align: start;
   font-size: 14px;
@@ -812,12 +810,19 @@ p {
 .footer-links {
   list-style: none;
   padding: 0;
+  margin-top: 10px;
 }
-
+.copyright{
+  color: white;
+  text-decoration: none;
+}
 .footer-links li {
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
-
+.mail , .call {
+  color: white;
+  text-decoration: none;
+}
 .footer-links a {
   color: #e8f4ff;
   text-decoration: none;
@@ -829,7 +834,7 @@ p {
   text-decoration: underline;
 }
 
-/* 📞 Contact */
+/* footer */
 .footer-contact {
   list-style: none;
   padding: 0;
@@ -838,11 +843,11 @@ p {
 }
 
 .footer-contact i {
-  color: #aee2ff;
+  color: #ffffff;
   margin-right: 8px;
+font-size: 20px;
 }
 
-/* 🌐 Social Icons */
 .footer-social {
   margin-top: 10px;
 }
@@ -858,7 +863,6 @@ p {
   color: #aee2ff;
 }
 
-/* ⚖️ Bottom Bar */
 .footer-bottom {
   text-align: center;
   font-size: 14px;
