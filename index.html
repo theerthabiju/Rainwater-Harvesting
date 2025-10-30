@@ -14,7 +14,7 @@
     <!-- 🌐 Navbar -->
     <nav class="navbar">
       <div class="logo">
-        <img src="assets/img/water copy2.png" width="150" alt="logo" />
+        <img src="assets/img/SEM_logo_editable.png" width="60" alt="logo" />
       </div>
       <ul class="nav-links">
         <li><a href="#about">Home</a></li>
@@ -28,17 +28,56 @@
     </nav>
 
     <!-- 🌦️ Hero Section -->
-    <header>
+ <header class="banner-slider">
+  <div class="slide active" style="background-image: url('assets/img/banner.png')">
+    <div class="banner-content">
       <h1>Rainwater Harvesting – Revolutionizing Urban Water Management</h1>
       <p>
-        Introducing SDS - The Smart Drainage System that captures, monitors, and
+        Introducing SDS – The Smart Drainage System that captures, monitors, and
         reuses rainwater efficiently.
       </p>
       <div class="btn-group">
-        <button class="btn">Learn About SDS</button>
-        <button class="btn">Join Our Mission</button>
+        <button class="btn"><span>Learn About SDS</span></button>
+        <button class="btn"><span>Join Our Mission</span></button>
       </div>
-    </header>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('assets/img/bannner2.png')">
+    <div class="banner-content">
+      <h1>Smart Solutions for a Sustainable Tomorrow</h1>
+      <p>
+        Empowering communities to make every drop count through innovation and technology.
+      </p>
+      <div class="btn-group">
+        <button class="btn"><span>Explore Technology</span></button>
+        <button class="btn"><span>Get Involved</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('assets/img/banner4.png')">
+    <div class="banner-content">
+      <h1>Transforming Cities with Smart Drainage Systems</h1>
+      <p>
+        Building a cleaner, greener, and water-efficient future with SDS.
+      </p>
+      <div class="btn-group">
+        <button class="btn"><span>Our Impact</span></button>
+        <button class="btn"><span>Join Us</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Arrows -->
+  <button class="prev"><i class="bi bi-chevron-left"></i></button>
+  <button class="next"><i class="bi bi-chevron-right"></i></button>
+
+  <!-- Dots -->
+  <div class="dots"></div>
+ </header>
+
+                                                        
 
     <!-- 💧 About Section -->
     <section id="about">
@@ -154,6 +193,38 @@
 </section>
 
 
+  <section class="metrics-wrapper" id="impact-metrics">
+    <h2 class="metrics-title">Our Positive Impact</h2>
+
+    <div class="metrics-list">
+      <!-- 1️⃣ Normal Layout -->
+      <div class="metric-item">
+        <div class="metric-icon"><i class="bi bi-droplet-half"></i></div>
+        <div class="metric-text">
+          <h3>Litres of Water Saved</h3>
+          <p class="metric-p">Over <strong>150,000 litres</strong> of rainwater collected and reused through smart drainage systems.</p>
+        </div>
+      </div>
+
+      <!-- 2️⃣ Reversed Layout -->
+      <div class="metric-item reverse">
+        <div class="metric-icon"><i class="bi bi-buildings"></i></div>
+        <div class="metric-text">
+          <h3>Communities Implemented</h3>
+          <p class="metric-p-reverse">Our solutions have been successfully deployed in <strong>85+ urban communities</strong> across cities.</p>
+        </div>
+      </div>
+
+      <!-- 3️⃣ Normal Layout -->
+      <div class="metric-item">
+        <div class="metric-icon"><i class="bi bi-globe2"></i></div>
+        <div class="metric-text">
+          <h3>Sustainability Score</h3>
+          <p class="metric-p">We’ve achieved a <strong>92%</strong> sustainability improvement through eco-friendly reuse systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
     <!-- ✉️ Contact Section -->
@@ -166,6 +237,69 @@
     </section> -->
 
     <!-- <footer>© 2025 Rainwater Harvesting | All Rights Reserved</footer> -->
+     <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slide");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    const dotsContainer = document.querySelector(".dots");
+    let index = 0;
+    let interval;
+
+    // Create dots dynamically
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.addEventListener("click", () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll("button");
+
+    function updateSlides() {
+      slides.forEach((s, i) => s.classList.toggle("active", i === index));
+      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      updateSlides();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlides();
+    }
+
+    function goToSlide(i) {
+      index = i;
+      updateSlides();
+      resetAutoSlide();
+    }
+
+    function startAutoSlide() {
+      interval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(interval);
+      startAutoSlide();
+    }
+
+    prev.addEventListener("click", () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    next.addEventListener("click", () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    updateSlides();
+    startAutoSlide();
+  });
+</script>
+
     <script>
       const menuToggle = document.querySelector(".menu-toggle");
       const navLinks = document.querySelector(".nav-links");
