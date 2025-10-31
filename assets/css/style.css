@@ -114,11 +114,15 @@ body {
 }
 
 .banner-content h1 {
-  font-size: 52px;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.bannerheadone{
+  font-size: 62px;
   font-weight: 700;
   margin-bottom: 15px;
 }
-
 .banner-content p {
   font-size: 18px;
   max-width: 700px;
@@ -258,7 +262,7 @@ body {
 }
 
 .dots button.active {
-  background: #00bcd4;
+  background: var(--primary-color);
   transform: scale(1.2);
 }
 
@@ -730,16 +734,36 @@ p {
 
 /* Hover background animation like banner btn */
 .learnsds {
-  background-color: var(--primary-color);
+  background-color: #1b6aafd3;
   color: white;
   text-align: center;
-  padding: 70px 20px;
+  padding: 100px 20px;
   border-radius: 20px 20px 0 0;
+  margin-bottom: 100px;
 }
+
 .learnsds h2 {
   font-size: 32px;
   margin-bottom: 20px;
 }
+
+.findout {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.learnsdsbtn {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 40px;
+  padding: 12px 30px;
+  background: white;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.4s ease;
+}
+
 .learnsdsbtn::before {
   content: "";
   position: absolute;
@@ -753,12 +777,14 @@ p {
   border-radius: 40px;
 }
 
-.learnsdsbtn span {
+.partnerwithus {
+  text-decoration: none;
+  color: var(--primary-color);
   position: relative;
   z-index: 1;
+  font-weight: 600;
 }
 
-/* Hover effect */
 .learnsdsbtn:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(45, 183, 225, 0.4);
@@ -767,12 +793,12 @@ p {
 .learnsdsbtn:hover::before {
   width: 100%;
   background: var(--secondary-color);
-  color: white;
 }
 
-.learnsdsbtn:hover span {
-  color: white;
+.learnsdsbtn:hover .partnerwithus {
+  color: white !important; /* ✅ forces text to turn white */
 }
+
 
 /*  Footer */
 .site-footer {
