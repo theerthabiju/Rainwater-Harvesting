@@ -139,8 +139,28 @@
         </p>
       </div>
     </section>
+<!--  Full-width Image Section -->
+<!-- 🌿 Innovation Gallery Section -->
+<section class="about-gallery">
+  <h2 class="section-title">Gallery Innovation</h2>
 
-    <!-- 🌎 Footer -->
+  <div class="gallery-slider">
+    <div class="slides">
+            <img src="assets/img/banner4.png" alt="Innovation 4" />
+      <img src="assets/img/Screenshot_31-10-2025_111044_.jpeg" alt="Innovation 1" />
+      <img src="assets/img/sds1.jpeg" alt="Innovation 2" />
+      <img src="assets/img/Screenshot_31-10-2025_111132_.jpeg" alt="Innovation 3" />
+      <img src="assets/img/banner4.png" alt="Innovation 4" />
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+
+    <!--  Footer -->
     <footer class="site-footer">
       <div class="footer-container">
         <!-- Column 1 -->
@@ -203,5 +223,26 @@
         >
       </div>
     </footer>
+
+    <script>
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+
+  let index = 0;
+
+  function showSlide(i) {
+    index = (i + images.length) % images.length;
+    slides.style.transform = `translateX(${-index * 100}%)`;
+  }
+
+  prev.addEventListener('click', () => showSlide(index - 1));
+  next.addEventListener('click', () => showSlide(index + 1));
+
+  // Auto-slide every 4 seconds
+  setInterval(() => showSlide(index + 1), 4000);
+</script>
+
   </body>
 </html>
