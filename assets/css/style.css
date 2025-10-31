@@ -1401,3 +1401,90 @@ font-size: 20px;
     height: 280px;
   }
 }
+/* innovatioon page  */
+.conventional-section {
+  background: #f4f8fb;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0077b6;
+  margin-bottom: 50px;
+}
+
+.conventional-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.conventional-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.conventional-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 119, 182, 0.2);
+}
+
+.conventional-card h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.conventional-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.conventional-card ul li {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  text-align: start;
+}
+
+.conventional-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.innovation-highlight {
+  background: linear-gradient(135deg,  #1b6aaf,  #1b6aaf);
+  color: #fff ;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.innovation-highlight h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.innovation-highlight p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+  color: white;
+}
+.mb-5{
+  margin-top: 80px !important;
+  margin-bottom: 60px !important;
+}
