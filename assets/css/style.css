@@ -42,14 +42,14 @@ body {
 }
 
 .nav-links li a {
-  color: #1e73be;
+  color:var(--primary-color);
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #3a9ca7;
+  color: #134877;
 }
 
 /* 🍔 Mobile Menu */
