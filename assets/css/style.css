@@ -182,7 +182,10 @@ body {
   gap: 15px;
   flex-wrap: wrap;
 }
-
+.bannerheadlink{
+  color: white;
+  text-decoration: none;
+}
 .btn {
   position: relative;
   background-color: var(--secondary-color);
