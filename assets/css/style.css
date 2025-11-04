@@ -829,7 +829,7 @@ display: none;
 }
 .impact-content p {
   color: #2b2622;
-  font-size: 0.95rem;
+  font-size: 14PX;
   line-height: 1.6;
 }
 
@@ -1560,6 +1560,7 @@ font-size: 20px;
   padding: 80px 20px;
   font-family: "Poppins", sans-serif;
   color: #333;
+  overflow-x: hidden;
 }
 
 .section-title {
@@ -1570,13 +1571,7 @@ font-size: 20px;
   margin-bottom: 50px;
 }
 
-.conventional-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-bottom: 40px;
-  align-items: start;
-}
+
 
 .conventional-card {
   background: #fff;
@@ -1710,6 +1705,71 @@ font-size: 20px;
     width: 100%;
     height: auto;
     margin-top: 40px;
+  }
+}
+/* cost */
+.cost-benefit-section {
+  padding: 70px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+.cost-benefit-table {
+  max-width: 700px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.cost-value {
+  font-weight: 500;
+}
+
+.cost-row.highlight {
+  background: #1b6aaf;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.roi-text {
+  max-width: 800px;
+  margin: 30px auto 0;
+  line-height: 1.8;
+  font-size: 14PX;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cost-benefit-table {
+    gap: 14px;
+  }
+
+  .cost-row {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.95rem;
+  }
+
+  .cost-value {
+    margin-top: 5px;
+  }
+
+  .cost-row.highlight {
+    text-align: center;
   }
 }
 
