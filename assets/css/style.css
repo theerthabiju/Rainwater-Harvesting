@@ -1289,6 +1289,34 @@ font-size: 20px;
   align-items: center;
   gap: 15px;
 }
+/* For tablets and small laptops */
+@media (max-width: 1024px) {
+  .about-banner-content h1 {
+    font-size: 34px;
+  }
+}
+
+/* For tablets (portrait) */
+@media (max-width: 768px) {
+  .about-banner-content h1 {
+    font-size: 28px;
+  }
+}
+
+/* For large mobile phones */
+@media (max-width: 576px) {
+  .about-banner-content h1 {
+    font-size: 24px;
+  }
+}
+
+/* For small mobile screens */
+@media (max-width: 375px) {
+  .about-banner-content h1 {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
+}
 
 /* Convert buttons to link-style */
 .about-btn {
