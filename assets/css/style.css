@@ -1017,6 +1017,25 @@ display: none;
   color: white;
   text-decoration: none;
 }
+.footericon {
+  margin-right: 10px;
+  color: #0077b6;
+}
+
+.call:hover {
+  text-decoration: underline;
+}
+
+.call.whatsapp {
+  display: inline-flex;
+  align-items: center;
+}
+
+.call.whatsapp i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
 .footer-links a {
   color: #e8f4ff;
   text-decoration: none;
