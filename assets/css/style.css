@@ -343,6 +343,45 @@ p {
   margin-bottom: 25px;
 }
 
+/* ---------------- Responsive Styles ---------------- */
+
+/* For tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  h2.section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  h2.section-title::after {
+    width: 60px;
+  }
+
+  p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+}
+
+/* For mobile devices (max-width: 576px) */
+@media (max-width: 576px) {
+  h2.section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  h2.section-title::after {
+    width: 50px;
+    height: 2px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+}
+
+
 /* 🌟 Mission & Vision Section */
 .mission-vision {
   display: flex;
