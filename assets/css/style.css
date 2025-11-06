@@ -1651,7 +1651,8 @@ font-size: 20px;
 
 .conventional-card h3 {
   color: var(--primary-color, #1b6aaf);
-  font-size: 1.3rem;
+  font-size: 22px;
+  font-weight: 600;
   margin-bottom: 15px;
 }
 
