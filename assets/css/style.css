@@ -1592,66 +1592,69 @@ font-size: 20px;
 /* gallery  */
 /* 🌿 Innovation Gallery Section */
 .about-gallery {
-  padding: 100px 0;
   text-align: center;
-  background-color: #f5f8fa;
-}
-
-.about-gallery .section-title {
-  font-size: 32px;
-  color: var(--primary-color);
-  margin-bottom: 40px;
+  position: relative;
+  width: 80%;
+  margin: auto;
 }
 
 .gallery-slider {
   position: relative;
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 .slides {
   display: flex;
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides figure {
+  min-width: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 .slides img {
   width: 100%;
-  flex-shrink: 0;
   height: 500px;
-  object-fit: cover;
+  border-radius: 10px;
 }
 
-/* Navigation buttons */
-.gallery-slider button {
+figcaption {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   border: none;
   font-size: 24px;
-  padding: 10px 16px;
-  border-radius: 50%;
+  padding: 8px 12px;
   cursor: pointer;
-  transition: background 0.3s ease;
-  z-index: 10;
+  border-radius: 50%;
 }
 
-.gallery-slider button:hover {
-  background: rgba(0, 0, 0, 0.7);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
-  left: 15px;
+  left: 10px;
 }
 
 .next {
-  right: 15px;
+  right: 10px;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
